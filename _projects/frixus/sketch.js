@@ -24,26 +24,27 @@ function preload() {
 }
 
 function setup() {
-  let canvas= createCanvas(900, 800, WEBGL);
-canvas.parent('div-sketch');
-cancion.loop();
+  let canvas = createCanvas(512, 512,WEBGL);
+  canvas.parent('div-sketch');
+
+  cancion.loop();
 }
 
 function draw() {
-noStroke();
-background(20);
+  noStroke();
+  background(20);
 
-orbitControl();
+  orbitControl();
 
-//esfera fondo
+  //esfera fondo
 
-push();
-texture(back);
-translate(0, 0, 0);
-rotateX(frameCount * 0.01);
-rotateY(frameCount * 0.01);
-rotateZ(frameCount * 0.01);
-sphere(2900);
+  push();
+  texture(back);
+  translate(0, 0, 0);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  rotateZ(frameCount * 0.01);
+  sphere(2900);
   pop();
 
   //esfera dos
